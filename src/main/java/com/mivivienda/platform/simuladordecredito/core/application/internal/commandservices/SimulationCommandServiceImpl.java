@@ -81,10 +81,8 @@ public class SimulationCommandServiceImpl implements SimulationCommandService {
         BigDecimal tcea = BigDecimal.valueOf(tceaDouble).setScale(8, RoundingMode.HALF_UP);
         simulation.setTcea(tcea);
 
-        // VAN = Monto recibido - Total pagado (diferencia simple)
-        // Nota: El VAN "técnico" con descuento de flujos se calcula con TIR = tasa de descuento
-        // Aquí calculamos una diferencia simple para evitar overflow
-        BigDecimal van = calcularVANCorrecto(lines, montoFinanciar);
+        // VAN = Monto recibido - Total de pagos descontados usando TEM
+        BigDecimal van = calcularVANCorrecto(lines, montoFinanciar, tem);
         simulation.setVan(van);
 
         // 10. Guardar todo
@@ -265,17 +263,37 @@ public class SimulationCommandServiceImpl implements SimulationCommandService {
     }
     
     /**
-     * Calcula VAN correctamente sin overflow
-     * VAN = Entrada - Sumatoria(Pagos descontados)
-     * En este caso, usamos TEM como tasa de descuento para simplificar
+     * Calcula VAN con descuento temporal usando la tasa proporcionada
+     * VAN = Entrada - Σ(Pagos / (1+tasa)^periodo)
      */
-    private BigDecimal calcularVANCorrecto(List<SimulationLine> lines, BigDecimal entrada) {
-        // VAN = Monto recibido - Total pagado (sin descuento temporal)
-        // En un contexto real, debería descontarse cada pago, pero por simplicidad:
-        BigDecimal totalPagado = lines.stream()
-                .map(SimulationLine::getCuotaTotal)
-                .reduce(BigDecimal.ZERO, BigDecimal::add);
+    private BigDecimal calcularVANCorrecto(List<SimulationLine> lines, BigDecimal entrada, BigDecimal tasaDescuento) {
+        BigDecimal van = entrada; // Entrada es positiva (lo que recibes)
         
-        return entrada.subtract(totalPagado).setScale(2, RoundingMode.HALF_UP);
+        try {
+            // Descontar cada pago a valor presente
+            for (int mes = 0; mes < lines.size(); mes++) {
+                // Factor de descuento: (1 + tasa)^(mes+1)
+                BigDecimal unoMasTasa = BigDecimal.ONE.add(tasaDescuento);
+                
+                // Usar Math.pow para evitar overflow con BigDecimal.pow
+                double unoMasTasaDouble = unoMasTasa.doubleValue();
+                double factorDouble = Math.pow(unoMasTasaDouble, mes + 1);
+                BigDecimal factor = BigDecimal.valueOf(factorDouble);
+                
+                // Pago descontado = Pago / Factor
+                BigDecimal pagoDescontado = lines.get(mes).getCuotaTotal()
+                        .divide(factor, 10, RoundingMode.HALF_UP);
+                
+                van = van.subtract(pagoDescontado); // Restamos los pagos descontados
+            }
+        } catch (Exception e) {
+            // Si hay overflow, usar método simplificado
+            BigDecimal totalPagado = lines.stream()
+                    .map(SimulationLine::getCuotaTotal)
+                    .reduce(BigDecimal.ZERO, BigDecimal::add);
+            return entrada.subtract(totalPagado).setScale(2, RoundingMode.HALF_UP);
+        }
+        
+        return van.setScale(2, RoundingMode.HALF_UP);
     }
 }

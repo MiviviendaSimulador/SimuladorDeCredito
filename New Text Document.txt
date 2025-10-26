@@ -1,0 +1,998 @@
+UNIVERSIDAD PERUANA DE CIENCIAS APLICADAS
+
+
+Simulador de Crédito MiVivienda
+
+Finanzas e Ingeniería Económica
+Docente: Gabriel Renato Chicoma Cacho
+Integrantes
+Nombres
+Código
+Carrera
+Yum Gonzales, Jorge Suin
+202210838
+Ing. de Software
+Llamocuro Hermosilla,Bryan Anderson
+202015775
+Ing. de Sistemas
+Ruiz Huisa, Daniel Elias
+202210764
+Ing. de Software
+Cruz Ticona, Aaron Alejandro
+202213502
+Ing. de Software
+Ventura Saldaña, William Agustín
+202310536
+Ing. de Sistemas
+
+
+
+Octubre del 2025
+STUDENT OUTCOME
+Criterio específico
+Acciones realizadas
+Conclusiones
+ 
+ 
+ 
+ 
+ 
+Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de software
+TP:
+Algoritmo
+Teoría conceptual Fórmulas
+Diseño de Datos de Prueba
+A través del desarrollo del proyecto, más concretamente de la teoría conceptual y las fórmulas relacionadas a nuestra solución han potenciado la comprensión y la habilidad para desarrollar soluciones de software más efectivas y precisas, basándose en las posibles necesidades de nuestros
+usuarios finales.
+
+TP:
+·  Prototipo de la aplicación web
+La creación del prototipo ayudó a tangibilidad los conceptos y fórmulas desarrolladas en el informe tomando en cuenta el servicio brindado al segmento objetivo y la entidad bancaria escogida.
+TP:
+Modelo de base de datos
+Durante el desarrollo del proyecto ha implicado la investigación sobre el tema financiero, ampliando los conceptos y conocimientos necesarios para la realización de
+este.
+TP:
+ Introducción al proyecto
+ Definiciones generales y conceptos básicos
+Teoría conceptual –
+Fórmulas
+Debido a la búsqueda pudimos definir soluciones adecuadas en base al problema planteado.
+Además, de obtener conocimientos de los principales conceptos usados en los distintos instrumentos claves del método francés.
+
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+
+ 
+Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de software
+TP:
+Algoritmo
+Teoría conceptual - Fórmulas
+ Diseño de Datos de Prueba
+El diseño y la evaluación de los datos de prueba han sido instrumentos claves para el refinamiento del algoritmo y han resaltado áreas de oportunidad para el aprendizaje y la mejora. Este proceso de revisión y ajuste constante ha reforzado la percepción de que el aprendizaje permanente es indispensable para mantenerse al día en un campo tan dinámico y en constante evolución como el del desarrollo de software, logrando así reconocer y aplicar la necesidad de aprendizaje permanente en el desarrollo de
+soluciones de software.
+TP:
+Marco teórico y práctico
+Ayuda con elección y análisis de la idea
+Conocer el marco teórico y práctico nos ayuda con una buena fundamentación sólida, un diseño de investigación más efectiva, mayor credibilidad, una mejora continua y adaptabilidad.
+TP:
+Prototipo de la aplicación móvil.
+Introducción al proyecto
+Definiciones generales y conceptos básicos
+Obtener la información actualizada del fondo Mivivienda fue indispensable para la organización de requisitos y datos finales en el prototipo.
+Sabemos que este prototipo irá cambiando mientras mejoremos nuestra comprensión y manejo de estos datos.
+Definir las bases por la cual se aplicará el proyecto son necesarias para el desarrollo e implemento del software y una mejor comprensión de las distintas definiciones usadas en el método francés.
+
+
+INTRODUCCIÓN
+
+En el ámbito de las finanzas personales y de vivienda en el Perú, los programas de crédito hipotecario desempeñan un rol fundamental para facilitar el acceso de las familias a una vivienda formal y sostenible. Entre estos instrumentos, el Nuevo Crédito MiVivienda con Bono del Buen Pagador (BBP) se ha consolidado como una de las principales alternativas para los hogares que buscan financiar la adquisición de un inmueble, ya que combina financiamiento otorgado por entidades financieras con un subsidio directo del Estado que premia el cumplimiento oportuno de las obligaciones de pago.
+
+El BBP constituye un incentivo financiero que reduce el monto total del préstamo hipotecario, mejorando la capacidad de endeudamiento y reduciendo el riesgo de incumplimiento. Sin embargo, a pesar de sus beneficios, muchos potenciales usuarios enfrentan dificultades para comprender los requisitos, proyectar sus flujos de pago a largo plazo y comparar adecuadamente las distintas opciones que ofrecen las instituciones financieras. Esta falta de información clara y de herramientas digitales limita la eficiencia del programa y reduce su alcance.
+
+En este contexto, resulta relevante desarrollar soluciones tecnológicas de apoyo a la gestión financiera hipotecaria, capaces de simular cronogramas de pago, calcular el impacto del BBP en la cuota mensual, y ofrecer transparencia en los costos reales de financiamiento (TCEA y TREA). De esta manera, se busca no solo optimizar la toma de decisiones de los beneficiarios, sino también fortalecer la confianza entre los actores involucrados: familias, entidades financieras y el Fondo MiVivienda.
+
+Este trabajo se centra en el análisis financiero y normativo del Crédito MiVivienda con BBP, así como en la propuesta de un enfoque tecnológico que permita automatizar cálculos, reducir errores y mejorar la experiencia de los usuarios, contribuyendo a una mayor inclusión financiera y a la reducción del déficit habitacional en el país. 
+
+ALCANCE
+
+El presente trabajo contempla el desarrollo de una solución tecnológica orientada a la simulación y análisis del Crédito MiVivienda con Bono del Buen Pagador (BBP), con el objetivo de brindar a los usuarios una herramienta que les permita proyectar de manera clara y precisa los flujos de pago asociados a la adquisición de una vivienda. La propuesta busca cubrir las necesidades tanto de los potenciales beneficiarios como de las entidades financieras, mediante la automatización de cálculos y la estandarización de información.
+En este marco, el sistema propuesto permitirá la simulación de cronogramas de pago considerando variables como el valor de la vivienda, la cuota inicial, el plazo de financiamiento, la tasa de interés y el rango aplicable del BBP. Asimismo, ofrecerá la posibilidad de calcular indicadores financieros clave como la Tasa de Costo Efectivo Anual (TCEA) y la Tasa de Rendimiento Efectivo Anual (TREA), garantizando transparencia respecto al costo real del crédito.
+De igual modo, el alcance incluye la visualización del impacto del BBP en la reducción del monto financiado y en la disminución de las cuotas mensuales, facilitando que los usuarios comprendan los beneficios concretos del subsidio. Adicionalmente, se contempla la comparación de diferentes escenarios de financiamiento, lo que permitirá evaluar alternativas según el perfil económico de cada beneficiario.
+La propuesta incorpora también la implementación de una base de datos estructurada, que permitirá almacenar simulaciones, registrar historiales de cálculos y generar reportes financieros que respalden la toma de decisiones. Todo ello se enmarcará en las disposiciones establecidas por la Superintendencia de Banca, Seguros y AFP (SBS) y el Fondo MiVivienda, asegurando la consistencia con la normativa vigente y las políticas de transparencia del sistema financiero peruano.
+En síntesis, el alcance del proyecto se orienta a la creación de una herramienta académica y práctica que no solo contribuya al análisis del Crédito MiVivienda con BBP, sino que también fortalezca la educación financiera, la inclusión social y la toma de decisiones informadas en el ámbito habitacional del Perú.
+CONTENIDO
+INTRODUCCIÓN	3
+ALCANCE	4
+CONTENIDO	5
+CAPÍTULO 1: DEFINICIONES GENERALES Y CONCEPTOS BÁSICOS	6
+1.1. Sobre el Nuevo Crédito MiVivienda con BBP	6
+1.2. Nuevo Crédito MiVivienda con el Sistema Propuesto	7
+1.3. Conceptos utilizados en el proyecto:	9
+CAPÍTULO 2: MARCO LEGAL Y TEÓRICO	10
+2.1 Marco legal	10
+2.2  Marco Teórico	11
+CAPÍTULO 3: ANÁLISIS Y DISEÑO  DEL SISTEMA	13
+3.1. Análisis de Datos	13
+Datos de Entrada	13
+Datos de Salida	14
+Datos Intermedios	15
+3.2. Diseño de la interfaz	16
+3.3. MARCO CONCEPTUAL - FÓRMULAS	19
+3.4 Diseño de datos de prueba	22
+Juego de datos 1	22
+Juego de datos 2	23
+4.1 Conversión de Monedas	24
+4.2 Conversión de Tasas de Interés	25
+4.3 Cálculo del Bono del Buen Pagador (BBP)	26
+4.4 Método Francés (Cuota fija sin cargos)	27
+
+
+
+
+
+
+
+
+
+CAPÍTULO 1: DEFINICIONES GENERALES Y CONCEPTOS BÁSICOS
+
+1.1. Sobre el Nuevo Crédito MiVivienda con BBP
+
+A continuación, se hará referencia a las definiciones de algunos términos fundamentales para el presente caso:
+
+Capital: Se refiere al dinero o patrimonio involucrado durante el proceso financiero junto con el cual se le mencione.
+
+Cuota: Parte del monto total de una deuda que debe ser pagada periódicamente.
+
+Crédito Hipotecario: Suma de dinero que se presta a una persona bajo condiciones específicas para la adquisición de vivienda.
+
+Bono del Buen Pagador (BBP): Subsidio no reembolsable otorgado por el Estado que premia el cumplimiento oportuno de las obligaciones.
+
+Entidad Financiera: Organización especializada en proveer servicios de préstamo de dinero autorizada por el Fondo MiVivienda.
+
+Método Francés: Sistema de amortización donde las cuotas son constantes durante todo el período del préstamo.
+
+¿Qué es el Nuevo Crédito MiVivienda con BBP?
+
+El Nuevo Crédito MiVivienda con Bono del Buen Pagador es un programa de financiamiento habitacional que permite la compra de una vivienda nueva o usada, combinando un crédito hipotecario otorgado por entidades financieras con un subsidio directo del Estado. Esta modalidad presenta plazos de crédito de entre 5 a 25 años y está diseñada para facilitar el acceso a la vivienda de familias peruanas.
+
+
+
+
+
+1.2. Nuevo Crédito MiVivienda con el Sistema Propuesto
+
+El crédito que maneja nuestro sistema permite la simulación completa del plan de pagos mediante el método francés vencido ordinario. Una vez ingresados los datos del crédito habitacional, se mostrará al usuario un cronograma detallado de pagos dentro del plazo determinado, incluyendo el impacto del BBP en la reducción de cuotas.
+
+¿A quién va dirigido? ¿Cuál es su utilidad?
+
+El Nuevo Crédito MiVivienda está dirigido a todas las familias peruanas que buscan adquirir su primera vivienda o mejorar su situación habitacional. El sistema ofrece los siguientes beneficios:
+
+Cuotas fijas calculadas con precisión usando tasas efectivas o nominales según la entidad financiera.
+Visualización clara del impacto del BBP en la reducción del monto total a financiar.
+Posibilidad de configurar períodos de gracia total o parcial según las políticas de cada banco.
+Cálculo automático de indicadores financieros como VAN, TIR y TCEA para total transparencia.
+Comparación entre diferentes escenarios de financiamiento.
+Soporte para operaciones en soles y dólares.
+
+¿Cómo funciona el sistema?
+Para acceder a la simulación del Nuevo Crédito MiVivienda debes seguir los siguientes pasos:
+
+Registrarte e ingresar al sistema con usuario y contraseña.
+Selecciona la entidad financiera de tu preferencia entre las 18 autorizadas.
+Ingresar los datos básicos: precio de vivienda, cuota inicial, plazo y tipo de tasa.
+Configurar parámetros adicionales como moneda, períodos de gracia y seguros.
+Generar la simulación completa con cronograma detallado.
+Analizar los indicadores financieros y tomar decisiones informadas.
+
+
+
+
+
+
+
+
+
+
+¿Cuáles son los requisitos del programa?
+Los requisitos para acceder al Nuevo Crédito MiVivienda son los siguientes:
+
+Ser peruano mayor de edad
+Precio de vivienda entre S/58,800 y S/419,600
+Cuota inicial mínima del 7.5% del valor de la vivienda
+Ingresos familiares que soporten la cuota calculada
+Buen comportamiento crediticio en el sistema financiero
+Afiliación obligatoria a seguros de desgravamen y riesgo
+No haber sido beneficiario anteriormente de programas habitacionales del Estado
+
+1.3. Conceptos utilizados en el proyecto:
+
+Precio de la Vivienda
+Representa el valor comercial del inmueble que se desea adquirir, establecido dentro de los rangos permitidos por el Fondo MiVivienda.
+
+Cuota Inicial
+Monto que el beneficiario debe aportar como pago inicial, con un mínimo del 7.5% del valor de la vivienda según normativa vigente.
+
+Bono del Buen Pagador (BBP)
+Subsidio directo del Estado que se descuenta del capital del préstamo, cuyo monto varía según el rango de precio de la vivienda.
+
+Seguro de Desgravamen
+Seguro obligatorio que cancela automáticamente la deuda en caso de fallecimiento o invalidez total y permanente del titular.
+
+Seguro de Riesgo
+Seguro que protege la vivienda contra siniestros como incendio, terremoto y otros riesgos cubiertos por la póliza.
+
+Plazo del Crédito
+Período de tiempo acordado para el pago total del préstamo, establecido entre 5 y 25 años según las políticas de cada entidad financiera.
+
+Cuota Mensual
+Cantidad fija que el prestatario debe pagar mensualmente, calculada mediante el método francés vencido ordinario.
+
+Período de Gracia
+Tiempo inicial del crédito durante el cual el deudor puede pagar solo intereses (gracia parcial) o diferir pagos (gracia total).
+
+Monto a Financiar
+Capital resultante después de descontar la cuota inicial y el BBP del precio total de la vivienda.
+
+Plan de Pagos por el Método Francés Vencido Ordinario
+Sistema de amortización donde cada cuota es igual y se paga al final de cada período mensual de 30 días.
+
+Tasa de Interés Efectiva Anual (TEA)
+Porcentaje anual que representa el costo real del dinero, incluyendo la capitalización de intereses.
+
+Tasa de Interés Nominal Anual (TNA)
+Tasa anual que no considera la capitalización de intereses y debe convertirse a efectiva para cálculos precisos.
+
+Tasa de Costo Efectivo Anual (TCEA)
+Indicador que incluye todos los costos del crédito: intereses, comisiones, seguros y gastos asociados.
+
+Tasa de Rendimiento Efectivo Anual (TREA)
+Desde la perspectiva del usuario, refleja el beneficio real de acceder al subsidio BBP.
+
+Valor Actual Neto (VAN)
+Técnica que descuenta los flujos futuros a valor presente para evaluar la conveniencia financiera del crédito.
+
+Tasa Interna de Retorno (TIR)
+Tasa que iguala el valor presente de los flujos del préstamo con el monto inicial financiado.
+
+
+
+
+
+CAPÍTULO 2: MARCO LEGAL Y TEÓRICO
+
+2.1 Marco legal
+
+El programa Nuevo Crédito MiVivienda con BBP se encuentra regulado por un conjunto de normas que garantizan la transparencia, la correcta asignación de subsidios y la estabilidad del sistema financiero:
+
+Ley General del Sistema Financiero y del Sistema de Seguros (Ley N.º 26702): regula la actividad de las entidades financieras que otorgan créditos hipotecarios, estableciendo lineamientos sobre tasas de interés, transparencia y protección al consumidor financiero.
+
+Ley del Fondo MiVivienda (Ley N.º 26912 y modificatorias): norma que crea el Fondo MiVivienda como organismo encargado de administrar y promover programas de financiamiento habitacional.
+
+Resoluciones del Fondo MiVivienda S.A.: establecen los criterios de elegibilidad, montos de financiamiento, plazos y rangos de subsidio del BBP, así como la interacción con entidades financieras participantes.
+
+Normativa de Transparencia de Información Financiera (SBS): obliga a las entidades a presentar la Tasa de Costo Efectivo Anual (TCEA) en toda oferta de crédito, garantizando que los usuarios conozcan el costo real del financiamiento.
+
+Política Nacional de Vivienda y Urbanismo (MVCS): enmarca los objetivos de acceso a vivienda digna y reducción del déficit habitacional, dentro del cual se inserta el Nuevo Crédito MiVivienda.
+
+2.2  Marco Teórico
+
+Desde el punto de vista financiero, el Crédito MiVivienda con BBP puede analizarse como un instrumento de deuda hipotecaria con subsidio estatal, cuyos principales componentes son:
+
+Crédito hipotecario: préstamo a largo plazo otorgado por una entidad financiera, garantizado con hipoteca sobre el inmueble.
+
+Bono del Buen Pagador (BBP): subsidio no reembolsable que se descuenta directamente del capital financiado, condicionado al buen comportamiento de pago del beneficiario.
+
+Tasa de Costo Efectivo Anual (TCEA): indicador que refleja el costo total del crédito, considerando intereses, comisiones y seguros.
+
+Tasa de Rendimiento Efectivo Anual (TREA): desde la perspectiva del usuario, refleja el beneficio real de acceder al subsidio BBP y cumplir con las condiciones del crédito.
+
+Plazo y cuota inicial: variables críticas que afectan la capacidad de pago y la viabilidad del financiamiento, establecidas en rangos entre 5 a 25 años y con un mínimo de 7.5% de cuota inicial.
+
+La literatura financiera sostiene que los subsidios focalizados como el BBP cumplen un doble objetivo: mejorar la accesibilidad de los hogares al crédito y disminuir el riesgo crediticio para las entidades financieras, al incentivar el cumplimiento de las obligaciones. No obstante, su efectividad depende en gran medida de la existencia de herramientas que permitan evaluar escenarios de endeudamiento y generar confianza en los usuarios.
+
+En este marco, la incorporación de soluciones tecnológicas orientadas a la simulación de cronogramas, cálculo de subsidios y monitoreo del cumplimiento se vuelve esencial para maximizar los beneficios del programa y fortalecer la inclusión financiera en el Perú.
+
+CAPÍTULO 3: ANÁLISIS Y DISEÑO  DEL SISTEMA
+3.1. Análisis de Datos
+Datos de Entrada
+
+Variable
+Tipo
+Tamaño
+Formato
+Valor por defecto
+Restricciones
+Precio de la Vivienda (PV)
+Float
+-
+S/ #,###.##
+-
+58,800 ≤ PV ≤ 419,600 (según MiVivienda)
+Cuota Inicial (CI)
+Float
+-
+S/ #,###.##
+0
+7.5% ≤ CI ≤ 30% de PV (definido por entidad financiera)
+Bono del Buen Pagador (BBP)
+Float
+-
+S/ #,###.##
+0
+Depende del rango de PV (17,700; 14,600; 13,000; 6,400; o 0 si PV > 310,800)
+Plazo del Crédito (N)
+Integer
+-
+Años o Meses
+20 años
+5 ≤ N ≤ 25 años (60–300 meses)
+Moneda (MND)
+String
+3
+PEN/USD
+PEN
+Debe ser PEN o USD
+Tipo de Tasa (TT)
+String
+10
+EA o TNA
+EA
+Solo puede ser “EA” (efectiva anual) o “TNA” (nominal anual)
+Valor de Tasa (T)
+Float
+-
+#.##%
+-
+T ≥ 0
+Capitalización (m)
+Integer
+-
+Número de periodos
+12
+Solo aplica si TT = TNA (ej. mensual, trimestral, etc.)
+Periodo de Gracia (G)
+Integer
+-
+Número de meses
+0
+0 ≤ G ≤ 24 meses (según entidad financiera)
+Tipo de Gracia (TG)
+String
+10
+“Total” o “Parcial”
+“Ninguna”
+-
+Seguros y Cargos (SC)
+Float
+-
+S/ #,###.##
+0
+Depende de la entidad financiera (seguro desgravamen, riesgo, portes, etc.)
+Entidad Financiera (BancoID)
+Integer
+-
+#
+1
+Debe existir en base de datos de entidades
+
+Datos de Salida
+
+Variable
+Tipo
+Tamaño
+Formato
+Restricciones
+Monto a Financiar (MF)
+Float
+-
+S/ #,###.##
+≥ 0
+Cuota Mensual Base (C)
+Float
+-
+S/ #,###.##
+≥ 0
+Cuota Mensual Total (CT)
+Float
+-
+S/ #,###.##
+Incluye seguros y cargos
+Tasa Efectiva Mensual (TEM)
+Float
+-
+#.##%
+≥ 0
+TCEA
+Float
+-
+#.##%
+≥ 0
+VAN
+Float
+-
+S/ #,###.##
+Puede ser positivo o negativo
+TIR
+Float
+-
+#.##%
+≥ 0
+Tabla de Cronograma de Pagos (Tabla Cuotas)
+Tabla
+n filas
+Ver detalle abajo
+-
+
+
+Tabla cuotas:
+Variable
+Tipo
+Formato
+Número de Cuota
+Integer
+#
+Fecha de Pago
+Date
+dd/mm/yyyy
+Saldo Inicial
+Float
+S/ #,###.##
+Interés
+Float
+S/ #,###.##
+Amortización
+Float
+S/ #,###.##
+Seguros/Cargos
+Float
+S/ #,###.##
+Cuota Total
+Float
+S/ #,###.##
+Saldo Final
+Float
+S/ #,###.##
+
+Datos Intermedios
+
+Variable
+Tipo
+Formato
+Descripción
+TEA (Tasa Efectiva Anual)
+Float
+#.##%
+Usada como base de cálculo si la tasa ya es efectiva
+TNA (Tasa Nominal Anual)
+Float
+#.##%
+Usada si la entidad define una tasa nominal
+i (Tasa Efectiva Mensual)
+Float
+#.##%
+i = (1+TEA)^(1/12)-1 o i = TNA/m
+Interés Mensual (IM)
+Float
+S/ #,###.##
+IM = Saldo Inicial × i
+Amortización Mensual (AM)
+Float
+S/ #,###.##
+AM = Cuota Base – Interés
+Saldo Capital (S)
+Float
+S/ #,###.##
+Capital pendiente en cada periodo
+Seguros (SD, SR)
+Float
+#.##%
+SD = seguro desgravamen, SR = seguro de riesgo
+Gastos Administrativos (GA)
+Float
+S/ #,###.##
+Comisión por portes, envío de estados de cuenta, etc.
+Flujos Netos (FN)
+Float
+S/ #,###.##
+Serie de flujos usada para VAN y TIR
+
+
+
+
+
+
+
+
+
+
+
+3.2. Diseño de la interfaz
+
+Diseño de la aplicación web:
+Vista de Inicio de Sesión (Log In / Sign In):
+
+
+Vista de Registro (Sign Up):
+
+
+Vista de Recuperación de contraseña:
+
+
+Vista de Nueva Simulación:
+
+
+
+Vista de Historial:
+
+
+Vista de Resultados:
+
+
+Vista de Comparación:
+
+3.3. MARCO CONCEPTUAL - FÓRMULAS
+Fórmulas Principales:
+Conversión de monedas (Soles/Dólares):
+
+M₂ = M₁ × T
+
+Donde:
+M₂ = Monto en la moneda destino
+M₁ = Monto en la moneda origen
+T = Tipo de cambio entre las dos monedas
+
+Conversión de tasas de interés:
+
+De Tasa Efectiva Anual (TEA) a Tasa Efectiva Mensual (TEM):
+
+
+De Tasa Nominal Anual (TNA) con capitalización a Tasa Efectiva Anual (TEA):
+  
+
+Donde:
+m = número de capitalizaciones en el período de la tasa nominal
+n = número de capitalizaciones en el año
+
+De Tasa Efectiva a otra Tasa Efectiva en diferente período:
+   
+
+
+Método Francés para crédito hipotecario
+Cálculo de la cuota financiera (método francés vencido ordinario):
+
+
+
+Alternativamente:
+Donde:
+
+C = Cuota financiera mensual
+M = Monto a financiar (después de aplicar el BBP)
+i = Tasa de interés efectiva mensual
+n = Número total de cuotas
+
+Cálculo del monto a financiar con Bono del Buen Pagador (BBP):
+
+M=Valor Vivienda−Cuota Inicial−BBP
+
+Cálculo de intereses y amortización por período:
+Interés del período k:  
+
+
+
+Amortización del período k:
+
+
+
+Saldo del préstamo después del período k:
+
+
+
+
+
+
+
+
+Donde:
+
+
+
+   
+
+Períodos de gracia
+Período de gracia total:
+Durante el período de gracia total solo se pagan intereses:
+
+
+Período de gracia parcial:
+
+ 	                             
+Donde:
+IG = Interés de gracia
+ng = Número de períodos de gracia
+MAIG = Monto adicional por intereses de gracia
+Seguros y comisiones
+Seguro de Desgravamen:
+
+
+Seguro Todo Riesgo:
+
+
+Cuota total mensual:
+
+Donde:
+		
+
+
+
+Indicadores financieros
+Valor Actual Neto (VAN) del préstamo:
+
+
+Tasa Interna de Retorno (TIR):
+La TIR es la tasa de descuento que hace el VAN igual a cero:
+
+
+
+Tasa de Costo Efectivo Anual (TCEA):
+La TCEA iguala el valor actual de todas las cuotas incluyendo principal, intereses, comisiones, gastos y seguros:
+
+
+
+Cálculos para incumplimiento
+
+Interés compensatorio vencido:
+
+
+Interés moratorio:
+
+
+	
+Donde:	
+
+
+
+Pagos anticipados
+Para cancelación total anticipada:
+
+
+Tasa efectiva diaria para cálculo de intereses:
+
+
+
+Intereses generados por días transcurridos:
+
+
+Conversión de monedas
+Conversión entre soles y dólares:
+
+
+
+
+
+
+Transparencia financiera (Norma SBS)
+Cálculo del costo total del crédito:
+
+
+Porcentaje de carga financiera mensual:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3.4 Diseño de datos de prueba
+Link de la hoja de cálculo: Diseño de datos de prueba.xlsx
+Juego de datos 1
+
+
+Juego de datos 2
+
+
+CAPÍTULO 4: ALGORITMO
+4.1 Conversión de Monedas
+Descripción: Convertir un monto de una moneda “A” a una moneda “B”.
+Proceso:
+Obtener el monto a convertir.
+
+
+Obtener la tasa de cambio (tipo de cambio).
+
+
+Multiplicar el monto por el tipo de cambio.
+
+
+Pseudocódigo:
+INICIO
+  LEER monto
+  LEER tipoCambio
+  montoConvertido = monto * tipoCambio
+  ESCRIBIR montoConvertido
+FIN
+
+
+Función:
+ConvertirMoneda(monto, tipoCambio)
+{
+  resultado = monto * tipoCambio
+  return resultado
+}
+
+
+4.2 Conversión de Tasas de Interés
+Descripción: Convertir tasas anuales a tasa efectiva mensual para el cálculo del cronograma.
+Proceso:
+Si la tasa es Efectiva Anual (EA): i = (1 + EA)^(1/12) – 1.
+
+
+Si la tasa es Nominal Anual (TNA) con capitalización m: i = TNA / m.
+
+
+Pseudocódigo:
+INICIO
+  LEER tipoTasa  
+  LEER tasaAnual 
+  SI tipoTasa = "EA" ENTONCES
+      i = (1 + tasaAnual)^(1/12) - 1
+  SINO
+      LEER m    
+      i = tasaAnual / m
+  FIN_SI
+  ESCRIBIR i
+FIN
+
+
+Función:
+TasaMensual(tipoTasa, tasaAnual, m)
+{
+  SI tipoTasa == "EA" ENTONCES
+     return (1 + tasaAnual)^(1/12) - 1
+  SINO
+     return tasaAnual / m
+  FIN_SI
+}
+
+
+4.3 Cálculo del Bono del Buen Pagador (BBP)
+Descripción: Determinar el BBP según el rango del Precio de Vivienda (PV).
+Proceso:
+Leer PV.
+
+
+Aplicar la regla por tramos y devolver el monto del BBP.
+
+
+Pseudocódigo:
+INICIO
+  LEER PV
+  SI 58,800 ≤ PV < 84,100 ENTONCES BBP = 17,700
+  SINO SI 84,100 ≤ PV < 125,900 ENTONCES BBP = 14,600
+  SINO SI 125,900 ≤ PV < 209,800 ENTONCES BBP = 13,000
+  SINO SI 209,800 ≤ PV ≤ 310,800 ENTONCES BBP = 6,400
+  SINO BBP = 0
+  FIN_SI
+  ESCRIBIR BBP
+FIN
+
+
+Función:
+CalcularBBP(PV)
+{
+  SI PV >= 58800 Y PV < 84100       ENTONCES return 17700
+  SI PV >= 84100  Y PV < 125900     ENTONCES return 14600
+  SI PV >= 125900 Y PV < 209800     ENTONCES return 13000
+  SI PV >= 209800 Y PV <= 310800    ENTONCES return 6400
+  return 0
+}
+
+
+4.4 Método Francés (Cuota fija sin cargos)
+Descripción: Calcular la cuota base de un préstamo mediante el método francés vencido.
+Proceso:
+Convertir tasa anual a tasa efectiva mensual (i).
+
+
+Aplicar la fórmula:
+ Cuota = P · [ i(1+i)^n / ((1+i)^n − 1) ] (si i=0 ⇒ Cuota = P/n)
+
+
+Pseudocódigo:
+INICIO
+  LEER P, i, n     
+  SI i = 0 ENTONCES
+      cuota = P / n
+  SINO
+      cuota = P * ( i * (1 + i)^n ) / ( (1 + i)^n - 1 )
+  FIN_SI
+  ESCRIBIR cuota
+FIN
+
+
+Función:
+Método Francés(P, i, n)
+{
+  SI i == 0 ENTONCES
+     return P / n
+  SINO
+     return P * ( i * (1 + i)^n ) / ( (1 + i)^n - 1 )
+  FIN_SI
+}
+
+
+
+4.5 Construcción del Cronograma (con BBP y Gracia)
+
+Descripcion:
+Generar el cronograma de pagos considerando el Bono del Buen Pagador (BBP) y el periodo de gracia (total o parcial). El cronograma muestra la evolución del saldo, los intereses y las cuotas durante la vida del préstamo.
+
+Proceso: 
+Leer el monto del préstamo (PV), el número de cuotas (n), la tasa efectiva mensual (i) y el tipo de gracia.
+alcular el Bono del Buen Pagador (BBP) y descontarlo del monto del préstamo para obtener el Monto Financiar:
+MontoFinanciar = PV – BBP
+Si existe periodo de gracia total, durante los meses de gracia no se pagan ni intereses ni capital (solo se acumulan intereses).
+Si existe periodo de gracia parcial, durante los meses de gracia solo se pagan intereses.
+Aplicar el Método Francés al MontoFinanciar para calcular la cuota base (una vez terminado el periodo de gracia).
+Construir el cronograma:
+Para cada mes, calcular los intereses, amortización y saldo restante.
+Considerar las reglas del tipo de gracia (total/parcial).
+Mostrar la tabla con columnas: Mes, Cuota, Interés, Amortización, Saldo.
+
+Pseudocodigo:
+
+INICIO
+  LEER PV, n, i, tipoGracia, mesesGracia
+  BBP = CalcularBBP(PV)
+  MontoFinanciar = PV - BBP
+  
+  SI tipoGracia = "total" O tipoGracia = "parcial" ENTONCES
+      PARA mes = 1 HASTA mesesGracia HACER
+          SI tipoGracia = "total" ENTONCES
+              interes = MontoFinanciar * i
+              cuota = 0
+              amortizacion = 0
+              saldo = MontoFinanciar + interes
+          SINO   // gracia parcial
+              interes = MontoFinanciar * i
+              cuota = interes
+              amortizacion = 0
+              saldo = MontoFinanciar
+          FIN_SI
+          MOSTRAR mes, cuota, interes, amortizacion, saldo
+          MontoFinanciar = saldo
+      FIN_PARA
+  FIN_SI
+  
+  cuotaBase = MétodoFrancés(MontoFinanciar, i, n - mesesGracia)
+  
+  PARA mes = mesesGracia + 1 HASTA n HACER
+      interes = MontoFinanciar * i
+      amortizacion = cuotaBase - interes
+      saldo = MontoFinanciar - amortizacion
+      MOSTRAR mes, cuotaBase, interes, amortizacion, saldo
+      MontoFinanciar = saldo
+  FIN_PARA
+FIN
+
+
+
+
+
+
+
+Funcion:
+
+ConstruirCronograma(PV, n, i, tipoGracia, mesesGracia)
+{
+  BBP = CalcularBBP(PV)
+  monto = PV - BBP
+  cronograma = []
+
+  // Periodo de gracia
+  PARA mes = 1 HASTA mesesGracia HACER
+    SI tipoGracia == "total" ENTONCES
+        interes = monto * i
+        cuota = 0
+        amortizacion = 0
+        saldo = monto + interes
+    SINO SI tipoGracia == "parcial" ENTONCES
+        interes = monto * i
+        cuota = interes
+        amortizacion = 0
+        saldo = monto
+    FIN_SI
+    agregar(cronograma, {mes, cuota, interes, amortizacion, saldo})
+    monto = saldo
+  FIN_PARA
+
+  // Periodo de pago normal
+  cuotaBase = MétodoFrancés(monto, i, n - mesesGracia)
+  PARA mes = mesesGracia + 1 HASTA n HACER
+    interes = monto * i
+    amortizacion = cuotaBase - interes
+    saldo = monto - amortizacion
+    agregar(cronograma, {mes, cuotaBase, interes, amortizacion, saldo})
+    monto = saldo
+  FIN_PARA
+
+  return cronograma
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+CAPÍTULO 5: MODELO DE BASE DE DATOS
+Link del Vertabelo: https://my.vertabelo.com/public-model-view/K3L36ygrVEJtyakaSdmpKgoaEVN1NQ8gmvLh7G0320Ft2i7UQIXCgoNPJXWvdkhL?x=2799&y=3022&zoom=0.4864 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Anexos 
+
+Figura 1 : Página de Fondo Mivivienda sobre toda sus informaciones e incluso el bono del buen pagador 
+
+Figura 2 : Página de Fondo Mivivienda sus ventajas de por qué elegirlo 
+
+Figura 3 : Página de Fondo Mivivienda  información sobre el bono de buen pagador  para el crédito Mivivienda 
+
+Figura 4 : Página de Fondo Mivivienda valores del BBP integrador 
+
+Tabla 1: Tabla de montos del BBP para 2025
+
+El Bono del Buen Pagador (BBP) es un subsidio del Estado aplicado al Nuevo Crédito MiVivienda, cuyo monto varía según el valor de la vivienda. El esquema es progresivo: cuanto menor es el precio del inmueble, mayor es el beneficio (hasta S/ 27,400). Esto reduce el capital a financiar, facilita el acceso a vivienda formal y premia el pago puntual de las cuotas, contribuyendo a la inclusión financiera y a la reducción del déficit habitacional.
+
+Fuente: Ministerio de Vivienda, Construcción y Saneamiento. (2025). Crédito Mivivienda: El Ministerio de Vivienda incrementa el Bono del Buen Pagador hasta S/ 27,400. Nota de prensa, 25 de marzo de 2025. https://www.gob.pe/institucion/vivienda/noticias/1132702-credito-mivivienda-el-ministerio-de-vivienda-incrementa-el-bono-del-buen-pagador-hasta-s/ 
+
+
+Bibliografías 
+
+Fondo MIVIVIENDA S.A. (2023). Nuevo Crédito MiVivienda. Recuperado de https://www.mivivienda.com.pe/PortalWEB 
+
+Superintendencia de Banca, Seguros y AFP (SBS). (2012). Reglamento de Transparencia de Información y Contratación con Usuarios del Sistema Financiero (Resolución SBS N.° 8181-2012). Lima: SBS.https://intranet2.sbs.gob.pe/dv_int_cn/763/v4.0/adjuntos/8181-2012.R.pdf 
+
+Banco Central de Reserva del Perú (BCRP). (2023). Memoria 2022. Lima: BCRP. Recuperado de https://www.bcrp.gob.pe 
+
+
