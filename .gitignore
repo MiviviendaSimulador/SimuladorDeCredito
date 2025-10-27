@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+HELP.md
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -8,23 +8,6 @@ release.properties
 dependency-reduced-pom.xml
 buildNumber.properties
 .mvn/timing.properties
-# https://maven.apache.org/wrapper/#usage-without-binary-jar
-.mvn/wrapper/maven-wrapper.jar
-
-# Eclipse m2e generated files
-# Eclipse Core
-.project
-# JDT-specific (Eclipse Java Development Tools)
-.classpath
-
-.idea/
-*.iml
-*.iws
-out/
-.idea_modules/
-=======
-HELP.md
-target/
 .mvn/wrapper/maven-wrapper.jar
 !**/src/main/**/target/
 !**/src/test/**/target/
@@ -43,6 +26,8 @@ target/
 *.iws
 *.iml
 *.ipr
+out/
+.idea_modules/
 
 ### NetBeans ###
 /nbproject/private/
@@ -56,4 +41,3 @@ build/
 
 ### VS Code ###
 .vscode/
->>>>>>> 0943bcc (first commit)
