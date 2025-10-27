@@ -8,6 +8,7 @@ import com.mivivienda.platform.simuladordecredito.core.interfaces.rest.resources
 import com.mivivienda.platform.simuladordecredito.core.interfaces.rest.resources.SimulationResource;
 import com.mivivienda.platform.simuladordecredito.core.interfaces.rest.transform.CreateSimulationCommandFromResourceAssembler;
 import com.mivivienda.platform.simuladordecredito.core.interfaces.rest.transform.SimulationResourceFromEntityAssembler;
+import com.mivivienda.platform.simuladordecredito.core.application.internal.queryservices.SimulationExportQueryService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.responses.ApiResponses;
@@ -26,10 +27,16 @@ public class SimulationsController {
     
     private final SimulationCommandService simulationCommandService;
     private final SimulationQueryService simulationQueryService;
-    
-    public SimulationsController(SimulationCommandService simulationCommandService, SimulationQueryService simulationQueryService) {
+    private final SimulationExportQueryService simulationExportQueryService;
+
+    public SimulationsController(
+            SimulationCommandService simulationCommandService,
+            SimulationQueryService simulationQueryService,
+            SimulationExportQueryService simulationExportQueryService
+    ) {
         this.simulationCommandService = simulationCommandService;
         this.simulationQueryService = simulationQueryService;
+        this.simulationExportQueryService = simulationExportQueryService;
     }
     
     @PostMapping
@@ -78,5 +85,29 @@ public class SimulationsController {
                 .toList();
         
         return ResponseEntity.ok(simulationResources);
+    }
+
+    @GetMapping("/{simulationId}/export")
+    @Operation(summary = "Export simulation to PDF or CSV")
+    @ApiResponses(value = {
+            @ApiResponse(responseCode = "200", description = "Simulation exported successfully"),
+            @ApiResponse(responseCode = "404", description = "Simulation not found"),
+            @ApiResponse(responseCode = "400", description = "Invalid format")
+    })
+    public ResponseEntity<byte[]> exportSimulation(
+            @PathVariable Long simulationId,
+            @RequestParam(defaultValue = "pdf") String format) {
+
+        var exported = simulationExportQueryService.exportSimulation(simulationId, format);
+        if (exported.isEmpty()) return ResponseEntity.notFound().build();
+
+        var mime = format.equalsIgnoreCase("csv")
+                ? "text/csv"
+                : "application/pdf";
+
+        return ResponseEntity.ok()
+                .header("Content-Disposition", "attachment; filename=simulation-" + simulationId + "." + format)
+                .contentType(MediaType.parseMediaType(mime))
+                .body(exported.get());
     }
 }
